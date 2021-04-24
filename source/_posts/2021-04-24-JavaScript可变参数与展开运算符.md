@@ -1,3 +1,11 @@
+---
+title: JavaScript可变参数与展开运算符
+tags: 
+    - 前端
+    - JavaScript
+cover: https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/1.jpg
+date: 2021-04-24
+---
 #	JavaScript可变参数与展开运算符
 
 ##	可变参数
