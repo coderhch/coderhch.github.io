@@ -91,7 +91,7 @@ favicon: /img/favicon.png
 
 # Avatar (头像)
 avatar:
-  img: /img/head_portrait.jpg
+  img: /img/avatar.jpg
   effect: false
 
 # 主页的横幅图像

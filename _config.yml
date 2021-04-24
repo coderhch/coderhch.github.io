@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://example.com
+url: https://coderhch.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -106,3 +106,20 @@ deploy:
   type: git
   repo: git@github.com:coderhch/coderhch.github.io.git
   branch: master
+
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-miku
+  display:
+    position: right
+    width: 200
+    height: 400
+  mobile:
+    show: true
