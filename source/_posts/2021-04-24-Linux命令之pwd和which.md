@@ -1,0 +1,38 @@
+---
+title: Linux命令之pwd和which
+tags: 
+    - linux
+    - 运维
+    - 命令行
+    - shell
+cover: https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/1.jpg
+date: 2021-04-24
+---
+# Linux命令之pwd和which
+
+## pwd
+
+### 描述
+
+pwd是Print Working Directory（打印当前工作目录）的缩写
+
+### 用法
+
+```shell
+[root@iZm5e9aiazlx2ktkg01676Z home]# pwd
+/home
+```
+
+## which
+
+### 描述
+
+获取命令的可执行文件位置
+
+### 用法
+
+```shell
+[root@iZm5e9aiazlx2ktkg01676Z home]# which pwd
+/usr/bin/pwd
+```
+

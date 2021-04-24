@@ -1,5 +1,5 @@
 ---
-title: Linux之history命令
+title: Linux命令之history命令
 tags: 
     - linux
     - 运维
@@ -8,7 +8,7 @@ tags:
 cover: https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-19/Linux%E4%B9%8Bhistory%E5%91%BD%E4%BB%A4/1.jpg
 date: 2021-04-19
 ---
-#	Linux之history命令
+#	Linux命令之history命令
 
 history的英文意思是历史，所以history命令用于列出所有执行过的命令行
 
