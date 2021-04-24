@@ -1,0 +1,112 @@
+#	JavaScript可变参数与展开运算符
+
+##	可变参数
+
+### 认识可变参数
+
+我们怎么处理那些个数不确定的参数呢？比如写一个加法函数求所以参数的和
+
+```javascript
+function add(a, b, c) {
+      return a + b + c
+}
+console.log(add(1, 2, 3)) //6
+```
+
+但是我不确定要传多少个参数，这种情况该怎么办呢？这个时候就可以用到可变参数了。如下
+
+```javascript
+ function add(...args) {
+     console.log(args) // [1, 2, 3, 4, 5, 6, 7]
+     let sum = 0
+     for (let i=0;i<args.length;i++){
+     	sum+=args[i]
+     }
+     console.log(sum) // 28
+}
+	add(1,2,3,4,5,6,7)
+```
+
+###	可变参数注意事项
+
+1. 箭头函数的参数部分即使只有一个可变参数，也不能省略括号
+
+2. 使用可变参数可以替代arguments获取实际参数
+3. 可变参数只能时最后一个参数，否则就会报错
+
+### 可变参数应用
+
+与解构赋值结合使用
+
+```javascript
+let [...args]=[1,2,3,4]
+console.log(args) //[1, 2, 3, 4]
+```
+
+## 数组展开运算符
+
+### 认识数组展开运算符
+
+我们如何求一个数组中的最小值，求最小值我们可以用`Math.min()`函数，但是`Math.min()`函数的形参是一个参数列表，这里就可以用到**展开运算符**
+
+```javascript
+let arr = [1,2,3,4]
+console.log(Math.min(...arr))
+```
+
+### 数组展开运算符的运用
+
+1. 复制数组
+
+```javascript
+let a=[1,2,3]
+let b =[...a];
+console.log(b) //[1, 2, 3]
+console.log(a===b) //false
+```
+
+2. 合并数组
+
+```javascript
+let a=[1,2,3]
+let b=[4,5,6]
+let c=[...a,...b]
+console.log(c) //[1, 2, 3, 4, 5, 6]
+```
+
+3. 字符串转为数组
+
+```javascript
+let str='dylan'
+let arr = [...str]
+console.log(arr) //["d", "y", "l", "a", "n"]
+```
+
+## 对象展开运算符
+
+### 认识对象展开运算符
+
+```javascript
+const apply = {
+  color:"红色",
+  shape:"球型",
+  taste:"甜"
+};
+console.log({...apply}) //{color: "红色", shape: "球型", taste: "甜"}
+```
+
+### 对象展开运算符的应用
+
+1. 复制对象
+
+```javascript
+const apply = {
+  color:"红色",
+  shape:"球型",
+  taste:"甜"
+};
+const apply2={...apply}
+console.log(apply2)//{color: "红色", shape: "球型", taste: "甜"}
+console.log(apply===apply2) //false
+```
+
