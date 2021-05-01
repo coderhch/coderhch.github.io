@@ -10,12 +10,12 @@ menu:
   主页: / #|| fas fa-home
   文章: /archives/ #|| fas fa-archive
   标签: /tags/ #|| fas fa-tags
-  类别: /categories/  #|| fas fa-folder-open
+  分类: /categories/  #|| fas fa-folder-open
   # List||fas fa-list:
   #   - Music || /music/ || fas fa-music
   #   - Movie || /movies/ || fas fa-video
   # Link: /link/ || fas fa-link
-  关于: /about/ #|| fas fa-heart
+  # 关于: /about/ #|| fas fa-heart
 
 # 隐藏移动侧边栏中的子菜单项
 hide_sidebar_menu_child: false
@@ -60,7 +60,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
@@ -104,7 +104,7 @@ archive_img: /img/3.jpg
 
 # 如果标签页的横幅没有设置，它将显示顶部的图像
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: /img/4.jpg
+tag_img: /img/7.jpg
 
 # 标签页的横幅图像
 # format: 
@@ -113,7 +113,7 @@ tag_per_img: /img/5.jpg
 
 # 如果分类页面的横幅没有设置，它将显示顶部的图片
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: /img/6.jpg
+category_img: /img/7.jpg
 
 # 分类页面的横幅图像
 # format: 
@@ -155,7 +155,7 @@ post_meta:
     date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
     date_format: date # date/relative 显示日期还是相对日期
     categories: true # true or false 主页是否显示分类
-    tags: false # true or false 主页是否显示标签
+    tags: true # true or false 主页是否显示标签
     label: true # true or false 显示描述性文字
   post:
     date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
@@ -624,7 +624,7 @@ aside:
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 一个热爱编程的中二青年
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all

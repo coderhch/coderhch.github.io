@@ -1,12 +1,13 @@
 ---
-title: nginx模块之http_random_index_module
+title: http_random_index_module模块
 tags: 
     - nginx
     - 运维
 cover: https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-19/nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_random_index_module/1.jpg
 date: 2021-04-19
+categories: nginx
 ---
-# nginx模块之http_random_index_module
+# http_random_index_module模块
 
 该`ngx_http_random_index_module`模块处理以斜杠字符（' `/`'）结尾的请求，并在目录中选择一个随机文件作为索引文件
 

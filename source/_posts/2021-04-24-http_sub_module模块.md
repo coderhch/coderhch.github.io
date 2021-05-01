@@ -1,12 +1,13 @@
 ---
-title: nginx之sub_module模块
+title: http_sub_module模块
 tags: 
     - nginx
     - 运维
 cover: https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/nginx%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/3.jpg
 date: 2021-04-24
+categories: nginx
 ---
-#	nginx之sub_module模块
+#	http_sub_module模块
 
 该`ngx_http_sub_module`模块是一个过滤器，可通过将一个指定的字符串替换为另一个指定的字符串来修改响应。
 

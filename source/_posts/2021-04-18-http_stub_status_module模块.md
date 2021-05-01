@@ -1,12 +1,13 @@
 ---
-title: nginx模块之http_stub_status_module
+title: http_stub_status_module模块
 tags: 
     - nginx
     - 运维
 cover: https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-18/nginx模块之http_stub_status_module/1.jpg?versionId=CAEQHhiBgIDFusCUxxciIDE3N2ZlNDA0NTk0YjRjZTJiNmUyYWU0NmNkOTk3MWY0
 date: 2021-04-18
+categories: nginx
 ---
-#	nginx模块之http_stub_status_module
+#	http_stub_status_module模块
 
 该**ngx_http_stub_status_module**模块提供对基本状态信息的访问
 
