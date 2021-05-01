@@ -10,7 +10,7 @@
   root: '/',
   hexoversion: '5.1.1',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
   translate: undefined,
   noticeOutdate: undefined,
   highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
@@ -76,7 +76,7 @@ var saveToLocal = {
   isHome: true,
   isHighlightShrink: false,
   isSidebar: false,
-  postUpdate: '2021-04-24 20:15:41'
+  postUpdate: '2021-05-01 13:03:48'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -136,7 +136,13 @@ if (autoChangeMode === '1') {
 } else {
   if (t === 'dark') activateDarkMode()
   else if (t === 'light') activateLightMode()
-}</script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">9</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/1.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">何春辉的博客</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">何春辉的博客</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/coderhch/" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="https://mail.qq.com/" target="_blank" title=""><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/24/2021-04-24-JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="JavaScript可变参数与展开运算符">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript可变参数与展开运算符"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="JavaScript可变参数与展开运算符">JavaScript可变参数与展开运算符</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span></div><div class="content">JavaScript可变参数与展开运算符可变参数认识可变参数我们怎么处理那些个数不确定的参数呢？比如写一个加法函数求所以参数的和
+}</script><meta name="generator" content="Hexo 5.1.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">10</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">7</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/1.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">何春辉的博客</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">何春辉的博客</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/coderhch/" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="https://mail.qq.com/" target="_blank" title=""><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/24/2021-04-24-pwd%E5%92%8Cwhich/" title="pwd和which命令">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="pwd和which命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-pwd%E5%92%8Cwhich/" title="pwd和which命令">pwd和which命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a></span></div><div class="content">pwd和which命令pwd描述pwd是Print Working Directory（打印当前工作目录）的缩写
+用法12[root@iZm5e9aiazlx2ktkg01676Z home]# pwd/home
+
+which描述获取命令的可执行文件位置
+用法12[root@iZm5e9aiazlx2ktkg01676Z home]# which pwd/usr/bin/pwd
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/24/2021-04-24-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="可变参数与展开运算符">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="可变参数与展开运算符"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="可变参数与展开运算符">可变参数与展开运算符</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span></div><div class="content">可变参数与展开运算符可变参数认识可变参数我们怎么处理那些个数不确定的参数呢？比如写一个加法函数求所以参数的和
 1234function add(a, b, c) &#123;      return a + b + c&#125;console.log(add(1, 2, 3)) //6
 
 但是我不确定要传多少个参数，这种情况该怎么办呢？这个时候就可以用到可变参数了。如下
@@ -147,17 +153,40 @@ if (autoChangeMode === '1') {
 
 使用可变参数可以替代arguments获取实际参数
 
-可变参数只能时最 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/24/2021-04-24-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/" title="nginx之sub_module模块">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/nginx%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx之sub_module模块"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/" title="nginx之sub_module模块">nginx之sub_module模块</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span></div><div class="content">nginx之sub_module模块该ngx_http_sub_module模块是一个过滤器，可通过将一个指定的字符串替换为另一个指定的字符串来修改响应。
+可变参数只能时最后一个参数，否则就会 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/24/2021-04-24-http_sub_module%E6%A8%A1%E5%9D%97/" title="http_sub_module模块">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/nginx%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="http_sub_module模块"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-http_sub_module%E6%A8%A1%E5%9D%97/" title="http_sub_module模块">http_sub_module模块</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nginx/">nginx</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/nginx/">nginx</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">http_sub_module模块该ngx_http_sub_module模块是一个过滤器，可通过将一个指定的字符串替换为另一个指定的字符串来修改响应。
 配置示例
 准备好文件放在/opt/add/code/目录下
 
-1234567891011121314151617181920&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;title&gt;Document&lt;/title&gt;  &lt;style&gt;  &lt;/style&gt;&lt;/hea ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/24/2021-04-24-Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/" title="Linux命令之pwd和which">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux命令之pwd和which"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/" title="Linux命令之pwd和which">Linux命令之pwd和which</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span></div><div class="content">Linux命令之pwd和whichpwd描述pwd是Print Working Directory（打印当前工作目录）的缩写
-用法12[root@iZm5e9aiazlx2ktkg01676Z home]# pwd/home
+1234567891011121314151617181920&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;title&gt;Document&lt;/title&gt;  &lt;style&gt;  &lt;/style&gt;&lt;/head ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/24/2021-04-24-BOM/" title="BOM">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/BOM/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BOM"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-BOM/" title="BOM">BOM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span></div><div class="content">BOMwindow全局变量是window的属性1234var a=10;console.log(window.hasOwnProperty(&#x27;a&#x27;)) //trueconsole.log(window.a===a)               //trueconsole.log(window.a)                   //10
 
-which描述获取命令的可执行文件位置
-用法12[root@iZm5e9aiazlx2ktkg01676Z home]# which pwd/usr/bin/pwd
+这就意味着，多个js文件之间是共享全局作用域的，即js文件没有作用域隔离功能
+内置函数普遍是window对象的方法12console.log(window.alert === alert)              //trueconsole.log(window.setInterval === setInterval)  //true
 
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/24/2021-04-24-DOM%E7%AC%94%E8%AE%B0/" title="DOM">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/DOM/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DOM"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-DOM%E7%AC%94%E8%AE%B0/" title="DOM">DOM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span></div><div class="content">DOM访问元素节点认识document对象
+窗口尺寸相关属性
+
+
+属性
+描述
+
+
+
+innerHeight
+浏览器窗口的内容区域的高度，包含水平滚动条
+
+
+innerWidth
+浏览器窗口的内容区域的宽度，包含垂直滚动条
+
+
+outerHeight
+浏览器窗口的外部高度
+
+
+outerWidth
+浏览器窗口的外部宽度
+
+
+1234c ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/24/2021-04-24-DOM/" title="DOM">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/DOM/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DOM"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-DOM/" title="DOM">DOM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span></div><div class="content">DOM访问元素节点认识document对象
 document对象是DOM中最重要的的东西，几乎    所有DOM的功能都封装在了document对象中
 document对象也表示整个HTML文档，它是DOM节点数的根
 document对象的nodeType属性值是9
@@ -216,142 +245,7 @@ parentNode
 
 
 第一个子节点
-firstChild ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/24/2021-04-24-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span></div><div class="content">正则表达式元字符
-
-
-元字符
-功能
-
-
-
-\d
-匹配一个数字
-
-
-\D
-匹配一个非数字字符
-
-
-\w
-匹配一个单字字符（字母、数字或者下划线）
-
-
-\W
-匹配一个非单字字符
-
-
-\s
-匹配一个空白字符，包含空格、制表符和换行符
-
-
-.
-任意字符
-
-
-^
-匹配开头
-
-
-$
-匹配结尾
-
-
-修饰符
-
-
-修饰符
-意义
-
-
-
-i
-不区分大小写搜索
-
-
-g
-全局搜索
-
-
-正则表达式的相关方法
-
-
-方法
-描述
-
-
-
-test()
-测试某字符串是否匹配正则表达式，返回布尔值
-
-
-exec()
-根据正则表达式，在字符串中进行查找，返回结果数组或者null
-
-
-字符串相关方法
-
-
-方法
-描述
-
-
-
-search()
-在字符串中根据正则表达式进行查找匹配，返回首次匹配到的位置索引，测试不到则返回-1
-
-
-match()
-在字符串中根据正则表达式进行查找匹配，返回一个数组，找不到则返回null
-
-
-replace()
-使用替换字符串替换匹配到的子字符串，可以使用正则表达式
-
-
-split()
-分割字符串为数组，可以使用正则表达式
-
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/24/2021-04-24-BOM%E7%AC%94%E8%AE%B0/" title="BOM">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/BOM/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BOM"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/24/2021-04-24-BOM%E7%AC%94%E8%AE%B0/" title="BOM">BOM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></span></div><div class="content">BOMwindow全局变量是window的属性1234var a=10;console.log(window.hasOwnProperty(&#x27;a&#x27;)) //trueconsole.log(window.a===a)               //trueconsole.log(window.a)                   //10
-
-这就意味着，多个js文件之间是共享全局作用域的，即js文件没有作用域隔离功能
-内置函数普遍是window对象的方法12console.log(window.alert === alert)              //trueconsole.log(window.setInterval === setInterval)  //true
-
-窗口尺寸相关属性
-
-
-属性
-描述
-
-
-
-innerHeight
-浏览器窗口的内容区域的高度，包含水平滚动条
-
-
-innerWidth
-浏览器窗口的内容区域的宽度，包含垂直滚动条
-
-
-outerHeight
-浏览器窗口的外部高度
-
-
-outerWidth
-浏览器窗口的外部宽度
-
-
-resiz ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/19/2021-04-19-Linux%E4%B9%8Bhistory%E5%91%BD%E4%BB%A4/" title="Linux命令之history命令">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-19/Linux%E4%B9%8Bhistory%E5%91%BD%E4%BB%A4/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux命令之history命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/19/2021-04-19-Linux%E4%B9%8Bhistory%E5%91%BD%E4%BB%A4/" title="Linux命令之history命令">Linux命令之history命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-18T16:00:00.000Z" title="Created 2021-04-19 00:00:00">2021-04-19</time></span></div><div class="content">Linux命令之history命令history的英文意思是历史，所以history命令用于列出所有执行过的命令行
-1[root@iZm5e9aiazlx2ktkg01676Z ~]# history 
-
-
-​    1  ifconfig​    2  yum -y install gcc gcc-c++ autocont pcre pcre-devel make automake​    3  ping www.baidu.com​    4  yum list | grep gcc​    5  iptables -L​    6  iptables -F​    7  iptables -t nat -F​    8  getenforce 
-……
-
-可以用!编号这样的格式来重新运行history输出中对应编号的命令
-1[root@iZm5e9aiazlx2ktkg01676Z ~]# !41
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/19/2021-04-19-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_random_index_module/" title="nginx模块之http_random_index_module">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-19/nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_random_index_module/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx模块之http_random_index_module"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/19/2021-04-19-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_random_index_module/" title="nginx模块之http_random_index_module">nginx模块之http_random_index_module</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-18T16:00:00.000Z" title="Created 2021-04-19 00:00:00">2021-04-19</time></span></div><div class="content">nginx模块之http_random_index_module该ngx_http_random_index_module模块处理以斜杠字符（’ /‘）结尾的请求，并在目录中选择一个随机文件作为索引文件
+firstChild ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/19/2021-04-19-http_random_index_module/" title="http_random_index_module模块">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-19/nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_random_index_module/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="http_random_index_module模块"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/19/2021-04-19-http_random_index_module/" title="http_random_index_module模块">http_random_index_module模块</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-18T16:00:00.000Z" title="Created 2021-04-19 00:00:00">2021-04-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nginx/">nginx</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/nginx/">nginx</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">http_random_index_module模块该ngx_http_random_index_module模块处理以斜杠字符（’ /‘）结尾的请求，并在目录中选择一个随机文件作为索引文件
 配置示例
 装备好3和html文件
 
@@ -369,7 +263,18 @@ location / {        root   /opt/app/code/;        random_index on;    }
 nginx: the configuration file /etc/nginx/nginx.conf syntax is oknginx: configuration file /etc/nginx/nginx.conf test is successful
 
 
-启动nginx服务nginx -c /etc/nginx/nginx.con ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/18/2021-04-18-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_stub_status_module/" title="nginx模块之http_stub_status_module">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-18/nginx模块之http_stub_status_module/1.jpg?versionId=CAEQHhiBgIDFusCUxxciIDE3N2ZlNDA0NTk0YjRjZTJiNmUyYWU0NmNkOTk3MWY0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx模块之http_stub_status_module"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/18/2021-04-18-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bhttp_stub_status_module/" title="nginx模块之http_stub_status_module">nginx模块之http_stub_status_module</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-17T16:00:00.000Z" title="Created 2021-04-18 00:00:00">2021-04-18</time></span></div><div class="content">nginx模块之http_stub_status_module该ngx_http_stub_status_module模块提供对基本状态信息的访问
+启动nginx服务nginx -c /etc/nginx/nginx.conf
+访问ht ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/19/2021-04-19-history%E5%91%BD%E4%BB%A4/" title="history命令">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-19/Linux%E4%B9%8Bhistory%E5%91%BD%E4%BB%A4/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="history命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/19/2021-04-19-history%E5%91%BD%E4%BB%A4/" title="history命令">history命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-18T16:00:00.000Z" title="Created 2021-04-19 00:00:00">2021-04-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/linux/">linux</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a></span></div><div class="content">history命令history的英文意思是历史，所以history命令用于列出所有执行过的命令行
+1[root@iZm5e9aiazlx2ktkg01676Z ~]# history 
+
+
+​    1  ifconfig​    2  yum -y install gcc gcc-c++ autocont pcre pcre-devel make automake​    3  ping www.baidu.com​    4  yum list | grep gcc​    5  iptables -L​    6  iptables -F​    7  iptables -t nat -F​    8  getenforce 
+……
+
+可以用!编号这样的格式来重新运行history输出中对应编号的命令
+1[root@iZm5e9aiazlx2ktkg01676Z ~]# !41
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/18/2021-04-18-http_stub_status_module%E6%A8%A1%E5%9D%97/" title="http_stub_status_module模块">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-18/nginx模块之http_stub_status_module/1.jpg?versionId=CAEQHhiBgIDFusCUxxciIDE3N2ZlNDA0NTk0YjRjZTJiNmUyYWU0NmNkOTk3MWY0" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="http_stub_status_module模块"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/18/2021-04-18-http_stub_status_module%E6%A8%A1%E5%9D%97/" title="http_stub_status_module模块">http_stub_status_module模块</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-17T16:00:00.000Z" title="Created 2021-04-18 00:00:00">2021-04-18</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/nginx/">nginx</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/nginx/">nginx</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">http_stub_status_module模块该ngx_http_stub_status_module模块提供对基本状态信息的访问
 配置
 编辑default.conf文件
 
@@ -391,10 +296,23 @@ nginx: the configuration file /etc/nginx/nginx.conf syntax is oknginx: configura
 
 4.访问http://ip地址/mystatus
 
-Active connections: 291server accepts handled requests 16630948 16630948 31070465Reading: 6  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/17/2021-04-17-%E4%BA%86%E8%A7%A3BFC/" title="了解BFC">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="了解BFC"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/17/2021-04-17-%E4%BA%86%E8%A7%A3BFC/" title="了解BFC">了解BFC</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-16T16:00:00.000Z" title="Created 2021-04-17 00:00:00">2021-04-17</time></span></div><div class="content">了解BFCBFC(Box Formatting Context,块级格式上下文)是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然。
+Active connections: 291server accepts handled requests 16630948 16630948 31070465Reading: 6 Writin ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/04/17/2021-04-17-this/" title="this">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/JavaScript_this%E6%8C%87%E9%92%88/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="this"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/17/2021-04-17-this/" title="this">this</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-16T16:00:00.000Z" title="Created 2021-04-17 00:00:00">2021-04-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/JavaScript/">JavaScript</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span></div><div class="content">thisthis表示函数的上下文，用一个函数，用不同的方式调用它，则函数的上下文不同。
+举例
+对象打点调它的方法函数，则函数的上下文是这个打点的对象
+
+123456789var obj=&#123;      a:1,      b:2,      fun:function()&#123;        console.log(this.a+this.b) //3        console.log(this === obj) //true        &#125;    &#125;    obj.fun()
+
+这里函数是obj对象打点调用的，所以这里的this指的就是obj对象
+
+圆括号直接调用函数，则函数的上下文是window对象
+
+12345678910var obj=&#123;      a:1,      b:2,      fun:function()&#123;        console.log(this.a+this.b) //NaN        console.log(this ===window) //true      &#125;    &#125 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/04/17/2021-04-17-BFC/" title="BFC">     <img class="post_bg" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BFC"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/04/17/2021-04-17-BFC/" title="BFC">BFC</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-04-16T16:00:00.000Z" title="Created 2021-04-17 00:00:00">2021-04-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/css/">css</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/css/">css</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">BFCBFC(Box Formatting Context,块级格式上下文)是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然。
 没有形成BFC
 一个盒子不设置height，当内容子元素都浮动时，无法撑起自身。下面看一个案例：
 
 1234&lt;div class=&quot;box&quot;&gt;    &lt;div class=&quot;c1&quot;&gt;&lt;/div&gt;    &lt;div class=&quot;c2&quot;&gt;&lt;/div&gt;&lt;/div&gt;
 
-12345678910111213141516.box &#123;     width: 400px;     border: 10px solid #000;   &#125;   .box .c1 &#123;     width: 200px;     height: 200px;     background-color: orange;   &#125;   .box .c2 &#123;     width: 200px;    ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Dylan</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">11</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coderhch/" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="https://mail.qq.com/" target="_blank" title=""><i class="fas fa-envelope"></i></a></div></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="JavaScript可变参数与展开运算符"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript可变参数与展开运算符"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="JavaScript可变参数与展开运算符">JavaScript可变参数与展开运算符</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/" title="nginx之sub_module模块"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/nginx%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="nginx之sub_module模块"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-nginx%E6%A8%A1%E5%9D%97%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/" title="nginx之sub_module模块">nginx之sub_module模块</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/" title="Linux命令之pwd和which"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux命令之pwd和which"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/" title="Linux命令之pwd和which">Linux命令之pwd和which</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-DOM%E7%AC%94%E8%AE%B0/" title="DOM"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/DOM/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DOM"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-DOM%E7%AC%94%E8%AE%B0/" title="DOM">DOM</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="正则表达式"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" title="正则表达式">正则表达式</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div></div></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/JavaScript/" style="font-size: 1.4em; color: #99a5b6">JavaScript</a> <a href="/tags/css/" style="font-size: 1.1em; color: #999">css</a> <a href="/tags/linux/" style="font-size: 1.2em; color: #999da3">linux</a> <a href="/tags/nginx/" style="font-size: 1.3em; color: #99a1ac">nginx</a> <a href="/tags/shell/" style="font-size: 1.2em; color: #999da3">shell</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.5em; color: #99a9bf">前端</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.2em; color: #999da3">命令行</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">笔记</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.4em; color: #99a5b6">运维</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">11</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">11</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-24T12:15:41.690Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Dylan</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body></html>
+12345678910111213141516.box &#123;     width: 400px;     border: 10px solid #000;   &#125;   .box .c1 &#123;     width: 200px;     height: 200px;     background-color: orange;   &#125;   .box .c2 &#123;     width: 200px;      ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Dylan</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">10</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">7</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/coderhch/" target="_blank" title=""><i class="fab fa-github"></i></a><a class="social-icon" href="https://mail.qq.com/" target="_blank" title=""><i class="fas fa-envelope"></i></a></div></div></div><div class="sticky_layout"><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">一个热爱编程的中二青年</div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-pwd%E5%92%8Cwhich/" title="pwd和which命令"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/Linux%E5%91%BD%E4%BB%A4%E4%B9%8Bpwd%E5%92%8Cwhich/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="pwd和which命令"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-pwd%E5%92%8Cwhich/" title="pwd和which命令">pwd和which命令</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="可变参数与展开运算符"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/JavaScript%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="可变参数与展开运算符"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0%E4%B8%8E%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/" title="可变参数与展开运算符">可变参数与展开运算符</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-http_sub_module%E6%A8%A1%E5%9D%97/" title="http_sub_module模块"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/nginx%E4%B9%8Bsub_module%E6%A8%A1%E5%9D%97/3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="http_sub_module模块"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-http_sub_module%E6%A8%A1%E5%9D%97/" title="http_sub_module模块">http_sub_module模块</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-BOM/" title="BOM"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/BOM/1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="BOM"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-BOM/" title="BOM">BOM</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/04/24/2021-04-24-DOM/" title="DOM"><img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-24/DOM/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DOM"/></a><div class="content"><a class="title" href="/2021/04/24/2021-04-24-DOM/" title="DOM">DOM</a><time datetime="2021-04-23T16:00:00.000Z" title="Created 2021-04-24 00:00:00">2021-04-24</time></div></div></div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div><ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/JavaScript/"><span class="card-category-list-name">JavaScript</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/css/"><span class="card-category-list-name">css</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/nginx/"><span class="card-category-list-name">nginx</span><span class="card-category-list-count">3</span></a></li>
+            
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/JavaScript/" style="font-size: 1.4em; color: #99a5b6">JavaScript</a> <a href="/tags/css/" style="font-size: 1.1em; color: #999">css</a> <a href="/tags/linux/" style="font-size: 1.2em; color: #999da3">linux</a> <a href="/tags/nginx/" style="font-size: 1.3em; color: #99a1ac">nginx</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1.5em; color: #99a9bf">前端</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 1.2em; color: #999da3">命令行</a> <a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.3em; color: #99a1ac">运维</a></div></div></div><div class="card-widget card-archives"><div class="card-content"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/04/"><span class="card-archive-list-date">四月 2021</span><span class="card-archive-list-count">10</span></a></li></ul></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-05-01T05:03:48.537Z"></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Dylan</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body></html>
