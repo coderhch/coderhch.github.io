@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BFC | 何春辉的博客</title><meta name="keywords" content="css,前端"><meta name="author" content="Dylan"><meta name="copyright" content="Dylan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="BFCBFC(Box Formatting Context,块级格式上下文)是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然。 没有形成BFC 一个盒子不设置height，当内容子元素都浮动时，无法撑起自身。下面看一个案例：  1234&lt;div class&#x3D;&quot;box&quot;&gt;    &lt;div class&#x3D;&quot;c1&quot;&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BFC">
+<meta property="og:url" content="https://coderhch.github.io/2021/04/17/css/2021-04-17-BFC/index.html">
+<meta property="og:site_name" content="何春辉的博客">
+<meta property="og:description" content="BFCBFC(Box Formatting Context,块级格式上下文)是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然。 没有形成BFC 一个盒子不设置height，当内容子元素都浮动时，无法撑起自身。下面看一个案例：  1234&lt;div class&#x3D;&quot;box&quot;&gt;    &lt;div class&#x3D;&quot;c1&quot;&amp;gt">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg">
+<meta property="article:published_time" content="2021-04-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-26T10:04:53.118Z">
+<meta property="article:author" content="Dylan">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coderhch.github.io/2021/04/17/css/2021-04-17-BFC/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2021-06-26 18:04:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">28</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">10</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#BFC"><span class="toc-number">1.</span> <span class="toc-text">BFC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E5%BD%A2%E6%88%90BFC"><span class="toc-number">1.0.1.</span> <span class="toc-text">没有形成BFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%BD%A2%E6%88%90BFC"><span class="toc-number">1.0.2.</span> <span class="toc-text">如何形成BFC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E5%8F%96%E6%B6%88%E7%9B%92%E5%AD%90%E7%9A%84margin%E5%A1%8C%E9%99%B7"><span class="toc-number">1.0.3.</span> <span class="toc-text">BFC取消盒子的margin塌陷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BFC%E5%8F%AF%E4%BB%A5%E9%98%BB%E6%AD%A2%E5%85%83%E7%B4%A0%E8%A2%AB%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E8%A6%86%E7%9B%96"><span class="toc-number">1.0.4.</span> <span class="toc-text">BFC可以阻止元素被浮动元素覆盖</span></a></li></ol></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">何春辉的博客</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">BFC</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-04-16T16:00:00.000Z" title="Created 2021-04-17 00:00:00">2021-04-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-06-26T10:04:53.118Z" title="Updated 2021-06-26 18:04:53">2021-06-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/css/">css</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h1><p>BFC(Box Formatting Context,块级格式上下文)是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然。</p>
+<h3 id="没有形成BFC"><a href="#没有形成BFC" class="headerlink" title="没有形成BFC"></a>没有形成BFC</h3><ol>
+<li>一个盒子不设置height，当内容子元素都浮动时，无法撑起自身。下面看一个案例：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.box</span> <span class="selector-class">.c1</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background-color</span>: orange;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.box</span> <span class="selector-class">.c2</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background-color</span>: blue;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>现在外面的盒子是有高度的。当我们把里面的两个盒子设置为浮动，这个时候发生了变化。</p>
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/1.jpg" style="zoom:25%;" />
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> <span class="selector-class">.c1</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background-color</span>: orange;</span><br><span class="line">     <span class="attribute">float</span>: left;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.box</span> <span class="selector-class">.c2</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background-color</span>: blue;</span><br><span class="line">     <span class="attribute">float</span>: left;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/2.jpg" style="zoom:25%;" />
+
+<p>盒子立刻就失去了高度，原因是父盒子没有形成BFC。</p>
+<h3 id="如何形成BFC"><a href="#如何形成BFC" class="headerlink" title="如何形成BFC"></a>如何形成BFC</h3><p>一共有四中方法</p>
+<ol>
+<li>float的值不是none</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">     <span class="attribute">float</span>: left;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/3.jpg" style="zoom:25%;" />
+
+<ol start="2">
+<li>position的值不是static或者relative</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">     <span class="attribute">position</span>:absolute;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/3.jpg" style="zoom:25%;" />
+
+<ol start="3">
+<li>display的值是inline-block、flex或者inline-flex</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">     <span class="attribute">display</span>: inline-block;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/3.jpg" style="zoom:25%;" />
+
+<ol start="4">
+<li>设置overflow:hidden;</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">     <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">     <span class="attribute">border</span>: <span class="number">10px</span> solid <span class="number">#000</span>;</span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/3.jpg" style="zoom:25%;" />
+
+<h3 id="BFC取消盒子的margin塌陷"><a href="#BFC取消盒子的margin塌陷" class="headerlink" title="BFC取消盒子的margin塌陷"></a>BFC取消盒子的margin塌陷</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">p</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/4.jpg" style="zoom:25%;" />
+
+<p>我们可以发现上p标记和下p标签中间只有20px</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/5.jpg" style="zoom:25%;" />
+
+<p>这个时候中间就有40px的缝隙了</p>
+<h3 id="BFC可以阻止元素被浮动元素覆盖"><a href="#BFC可以阻止元素被浮动元素覆盖" class="headerlink" title="BFC可以阻止元素被浮动元素覆盖"></a>BFC可以阻止元素被浮动元素覆盖</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;s1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">&quot;s2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s1</span>&#123;</span><br><span class="line">  <span class="attribute">float</span>:left;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.s2</span>&#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/6.jpg" style="zoom:25%;" />
+
+<p>如果class=“s2”的盒子不浮动的话</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s2</span>&#123;  </span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background-color</span>: blue;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/7.jpg" style="zoom:25%;" />
+
+<p>蓝色的盒子就被红色的盒子遮蔽了，这个时候只需要给class=”s2”的盒子加上overflow:hidden</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.s2</span>&#123;  </span><br><span class="line">     <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">     <span class="attribute">background-color</span>: blue;</span><br><span class="line">     <span class="attribute">overflow</span>: hidden;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/6.jpg" style="zoom:25%;" />
+
+<p>蓝色的盒子就出来了</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Dylan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://coderhch.github.io/2021/04/17/css/2021-04-17-BFC/">https://coderhch.github.io/2021/04/17/css/2021-04-17-BFC/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/04/18/nginx/2021-04-18-http_stub_status_module%E6%A8%A1%E5%9D%97/"><img class="prev-cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-18/nginx模块之http_stub_status_module/1.jpg?versionId=CAEQHhiBgIDFusCUxxciIDE3N2ZlNDA0NTk0YjRjZTJiNmUyYWU0NmNkOTk3MWY0" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">http_stub_status_module模块</div></div></a></div><div class="next-post pull-right"><a href="/2021/04/17/js/2021-04-17-this/"><img class="next-cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/JavaScript_this%E6%8C%87%E9%92%88/1.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">this</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/05/08/css/2021-05-08-文本与字体/" title="文本与字体"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-08/%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E4%BD%93/65898462_675611099532046_4289875133728480819_n.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-08</div><div class="title">文本与字体</div></div></a></div><div><a href="/2021/05/15/css/2021-05-15-圆角/" title="圆角"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/%E5%9C%86%E8%A7%92/5290131_p0_master1200.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-15</div><div class="title">圆角</div></div></a></div><div><a href="/2021/05/15/css/2021-05-15-定位/" title="定位"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/%E5%AE%9A%E4%BD%8D/76646067_p0_master1200.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-15</div><div class="title">定位</div></div></a></div><div><a href="/2021/05/09/css/2021-05-09-盒模型/" title="盒模型"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-09/%E7%9B%92%E6%A8%A1%E5%9E%8B/118457554_171225367824026_3619927744686621832_n.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-09</div><div class="title">盒模型</div></div></a></div><div><a href="/2021/05/04/css/2021-05-04-选择器/" title="选择器"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-04/%E9%80%89%E6%8B%A9%E5%99%A8/66436699_488788521946130_6253176039040682977_n.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-04</div><div class="title">选择器</div></div></a></div><div><a href="/2021/05/15/css/2021-05-15-浮动/" title="浮动"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/%E6%B5%AE%E5%8A%A8/19660175_p0_master1200.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-15</div><div class="title">浮动</div></div></a></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Dylan</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body></html>

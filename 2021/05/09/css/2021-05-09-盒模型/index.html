@@ -1,0 +1,419 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>盒模型 | 何春辉的博客</title><meta name="keywords" content="css,前端"><meta name="author" content="Dylan"><meta name="copyright" content="Dylan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="盒模型 什么是盒模型  所有HTML标签都可以看成矩形盒子，由width、height、padding、border构成，称为盒模型  width、height不是盒子总宽高   盒子的总宽度&#x3D;width+左右padding+左右border 盒子的总高度&#x3D;height+上下padding+上下border  width属性 width属性表示盒子内容的宽度 width属性的单位通常是px 当块级">
+<meta property="og:type" content="article">
+<meta property="og:title" content="盒模型">
+<meta property="og:url" content="https://coderhch.github.io/2021/05/09/css/2021-05-09-%E7%9B%92%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="何春辉的博客">
+<meta property="og:description" content="盒模型 什么是盒模型  所有HTML标签都可以看成矩形盒子，由width、height、padding、border构成，称为盒模型  width、height不是盒子总宽高   盒子的总宽度&#x3D;width+左右padding+左右border 盒子的总高度&#x3D;height+上下padding+上下border  width属性 width属性表示盒子内容的宽度 width属性的单位通常是px 当块级">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-09/%E7%9B%92%E6%A8%A1%E5%9E%8B/118457554_171225367824026_3619927744686621832_n.jpg">
+<meta property="article:published_time" content="2021-05-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-26T10:04:53.118Z">
+<meta property="article:author" content="Dylan">
+<meta property="article:tag" content="css">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-09/%E7%9B%92%E6%A8%A1%E5%9E%8B/118457554_171225367824026_3619927744686621832_n.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://coderhch.github.io/2021/05/09/css/2021-05-09-%E7%9B%92%E6%A8%A1%E5%9E%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.4.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2021-06-26 18:04:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+  }
+}
+
+var autoChangeMode = 'false'
+var t = saveToLocal.get('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (saveToLocal.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">28</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">10</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">Categories</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">盒模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#width%E5%B1%9E%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">width属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#height%E5%B1%9E%E6%80%A7"><span class="toc-number">1.2.</span> <span class="toc-text">height属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#padding%E5%B1%9E%E6%80%A7"><span class="toc-number">1.3.</span> <span class="toc-text">padding属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#margin%E5%B1%9E%E6%80%A7"><span class="toc-number">1.4.</span> <span class="toc-text">margin属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#border%E5%B1%9E%E6%80%A7"><span class="toc-number">1.5.</span> <span class="toc-text">border属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E5%9E%8B"><span class="toc-number">1.5.1.</span> <span class="toc-text">线型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%BB%E6%8E%89%E8%BE%B9%E6%A1%86"><span class="toc-number">1.5.2.</span> <span class="toc-text">去掉边框</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#box-sizing%E5%B1%9E%E6%80%A7"><span class="toc-number">1.6.</span> <span class="toc-text">box-sizing属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.7.</span> <span class="toc-text">行内元素和块级元素的相互转换</span></a></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-09/%E7%9B%92%E6%A8%A1%E5%9E%8B/118457554_171225367824026_3619927744686621832_n.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">何春辉的博客</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><span> 分类</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">盒模型</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-08T16:00:00.000Z" title="Created 2021-05-09 00:00:00">2021-05-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-06-26T10:04:53.118Z" title="Updated 2021-06-26 18:04:53">2021-06-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/css/">css</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><ol>
+<li>什么是盒模型</li>
+</ol>
+<p>所有HTML标签都可以看成矩形盒子，由width、height、padding、border构成，称为<strong>盒模型</strong></p>
+<ol start="2">
+<li>width、height不是盒子总宽高</li>
+</ol>
+<ul>
+<li>盒子的总宽度=width+左右padding+左右border</li>
+<li>盒子的总高度=height+上下padding+上下border</li>
+</ul>
+<h2 id="width属性"><a href="#width属性" class="headerlink" title="width属性"></a>width属性</h2><ul>
+<li>width属性表示盒子内容的宽度</li>
+<li>width属性的单位通常是px</li>
+<li>当块级元素没有设置width属性时，它将自动撑满</li>
+</ul>
+<h2 id="height属性"><a href="#height属性" class="headerlink" title="height属性"></a>height属性</h2><ul>
+<li>height属性表示盒子内容的高度</li>
+<li>height属性的单位通常是px</li>
+<li>盒子的height属性如果不设置，它将自动被其内容撑开，如果没有内容，则height默认是0</li>
+</ul>
+<h2 id="padding属性"><a href="#padding属性" class="headerlink" title="padding属性"></a>padding属性</h2><p>padding是盒子的内边距，即盒子边框内壁到文字的距离</p>
+<ol>
+<li>padding是四个方向的</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">小属性</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">padding-top</td>
+<td align="center">上padding</td>
+</tr>
+<tr>
+<td align="center">padding-right</td>
+<td align="center">右padding</td>
+</tr>
+<tr>
+<td align="center">padding-bottom</td>
+<td align="center">下padding</td>
+</tr>
+<tr>
+<td align="center">padding-left</td>
+<td align="center">左padding</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>padding的四数值写法</li>
+</ol>
+<p>padding属性如果用四个数值以空格隔开进行设置，分别表示上、右、下左的padding</p>
+<ol start="3">
+<li>padding三数值写法</li>
+</ol>
+<p>padding属性如果用三个数值以空格隔开进行设置，分别表示上、左右、下的padding</p>
+<ol start="4">
+<li>padding的二数值写法</li>
+</ol>
+<p>padding属性如果用二个数值空格隔开进行设置，分别表示上下、左右的padding</p>
+<h2 id="margin属性"><a href="#margin属性" class="headerlink" title="margin属性"></a>margin属性</h2><p>margin是盒子的外边距，即盒子和其他盒子之间的距离</p>
+<ol>
+<li>margin有四个方向</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">小属性</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">margin-top</td>
+<td align="center">上margin，“向上踹”</td>
+</tr>
+<tr>
+<td align="center">margin-right</td>
+<td align="center">右margin，“向右踹”</td>
+</tr>
+<tr>
+<td align="center">margin-bottom</td>
+<td align="center">下margin，“向下踹”</td>
+</tr>
+<tr>
+<td align="center">margin-left</td>
+<td align="center">左margin，“向左踹”</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>margin的塌陷</li>
+</ol>
+<p>竖直方向的margin有塌陷现象：小的margin会塌陷到大的margin中，从而margi不叠加，只以大值为准</p>
+<ol start="3">
+<li>默认margin</li>
+</ol>
+<p>一些元素都有默认的margin，在开始制作网页的时候要将他们清除</p>
+<ol start="4">
+<li>盒子的水平居中</li>
+</ol>
+<p>将盒子左右两边的margin都设置为auto，盒子将水平居中</p>
+<ol start="5">
+<li>margin和padding的写法一致</li>
+</ol>
+<h2 id="border属性"><a href="#border属性" class="headerlink" title="border属性"></a>border属性</h2><p>border属性三个要素</p>
+<p><code>border: 1px solid red;</code></p>
+<ol>
+<li>线宽度</li>
+<li>线型</li>
+<li>线颜色</li>
+</ol>
+<h3 id="线型"><a href="#线型" class="headerlink" title="线型"></a>线型</h3><table>
+<thead>
+<tr>
+<th align="center">线型值</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">solid</td>
+<td align="center">实线</td>
+</tr>
+<tr>
+<td align="center">dashed</td>
+<td align="center">虚线</td>
+</tr>
+<tr>
+<td align="center">dotted</td>
+<td align="center">点状线</td>
+</tr>
+</tbody></table>
+<ol>
+<li>border: 1px solid red;</li>
+</ol>
+<div class="box1">
+</div>
+
+
+<ol start="2">
+<li>border: 1px dashed red;</li>
+</ol>
+<div class="box2">
+</div>
+
+
+<ol start="3">
+<li>border: 1px dotted red;</li>
+</ol>
+<div class="box3">
+</div>
+
+<table>
+<thead>
+<tr>
+<th align="center">小属性</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">border-width</td>
+<td align="center">线宽</td>
+</tr>
+<tr>
+<td align="center">border-style</td>
+<td align="center">线型</td>
+</tr>
+<tr>
+<td align="center">border-color</td>
+<td align="center">线颜色</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">border-top</td>
+<td align="center">上边框</td>
+</tr>
+<tr>
+<td align="center">border-right</td>
+<td align="center">右边框</td>
+</tr>
+<tr>
+<td align="center">border-bottom</td>
+<td align="center">下边框</td>
+</tr>
+<tr>
+<td align="center">border-left</td>
+<td align="center">左边框</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">border-top-width</td>
+<td align="center">上边框宽度</td>
+</tr>
+<tr>
+<td align="center">border-top-style</td>
+<td align="center">上边框线型</td>
+</tr>
+<tr>
+<td align="center">border-top-color</td>
+<td align="center">上边框颜色</td>
+</tr>
+<tr>
+<td align="center">border-right-width</td>
+<td align="center">右边框宽度</td>
+</tr>
+<tr>
+<td align="center">border-right-style</td>
+<td align="center">右边框线型</td>
+</tr>
+<tr>
+<td align="center">border-right-color</td>
+<td align="center">右边框颜色</td>
+</tr>
+<tr>
+<td align="center">border-bottom-width</td>
+<td align="center">下边框宽度</td>
+</tr>
+<tr>
+<td align="center">border-bottom-style</td>
+<td align="center">下边框线型</td>
+</tr>
+<tr>
+<td align="center">border-bottom-color</td>
+<td align="center">下边框颜色</td>
+</tr>
+<tr>
+<td align="center">border-left-width</td>
+<td align="center">左边框宽度</td>
+</tr>
+<tr>
+<td align="center">border-left-style</td>
+<td align="center">左边框线型</td>
+</tr>
+<tr>
+<td align="center">border-left-color</td>
+<td align="center">左边框颜色</td>
+</tr>
+</tbody></table>
+<h3 id="去掉边框"><a href="#去掉边框" class="headerlink" title="去掉边框"></a>去掉边框</h3><p><code>border: none;</code></p>
+<h2 id="box-sizing属性"><a href="#box-sizing属性" class="headerlink" title="box-sizing属性"></a>box-sizing属性</h2><p>将盒子添加了<code>box-sizing:border-box;</code>之后盒子的width、height数字就表示盒子实际占有宽高，即padding、border变为“内缩”的，不再“外扩”</p>
+<h2 id="行内元素和块级元素的相互转换"><a href="#行内元素和块级元素的相互转换" class="headerlink" title="行内元素和块级元素的相互转换"></a>行内元素和块级元素的相互转换</h2><ul>
+<li>使用<code>display:block;</code>即可将元素转为块级元素</li>
+<li>使用<code>display:inline;</code>即可将元素转为行内元素</li>
+<li>使用<code>display:inline-block;</code>即可将元素转为行内块</li>
+</ul>
+<style>
+  .box2{
+    width: 200px;
+    height: 200px;
+    border: 1px dashed black ;
+  }
+  .box3{
+    width: 200px;
+    height: 200px;
+    border: 1px dotted black ;
+  }
+  .box1{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black ;
+  }
+</style></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Dylan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://coderhch.github.io/2021/05/09/css/2021-05-09-%E7%9B%92%E6%A8%A1%E5%9E%8B/">https://coderhch.github.io/2021/05/09/css/2021-05-09-%E7%9B%92%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/css/">css</a><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-09/%E7%9B%92%E6%A8%A1%E5%9E%8B/118457554_171225367824026_3619927744686621832_n.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/15/vue/2021-05-15-v-on/"><img class="prev-cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/v-on/58839774_p0_master1200.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">v-on</div></div></a></div><div class="next-post pull-right"><a href="/2021/05/08/css/2021-05-08-%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E4%BD%93/"><img class="next-cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-08/%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E4%BD%93/65898462_675611099532046_4289875133728480819_n.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">文本与字体</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/04/17/css/2021-04-17-BFC/" title="BFC"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-04-17/%E4%BA%86%E8%A7%A3BFC/8.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-17</div><div class="title">BFC</div></div></a></div><div><a href="/2021/05/08/css/2021-05-08-文本与字体/" title="文本与字体"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-08/%E6%96%87%E6%9C%AC%E4%B8%8E%E5%AD%97%E4%BD%93/65898462_675611099532046_4289875133728480819_n.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-08</div><div class="title">文本与字体</div></div></a></div><div><a href="/2021/05/15/css/2021-05-15-圆角/" title="圆角"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/%E5%9C%86%E8%A7%92/5290131_p0_master1200.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-15</div><div class="title">圆角</div></div></a></div><div><a href="/2021/05/15/css/2021-05-15-定位/" title="定位"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/%E5%AE%9A%E4%BD%8D/76646067_p0_master1200.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-15</div><div class="title">定位</div></div></a></div><div><a href="/2021/05/04/css/2021-05-04-选择器/" title="选择器"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-04/%E9%80%89%E6%8B%A9%E5%99%A8/66436699_488788521946130_6253176039040682977_n.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-04</div><div class="title">选择器</div></div></a></div><div><a href="/2021/05/15/css/2021-05-15-浮动/" title="浮动"><img class="cover" src="https://coderhch.oss-cn-shanghai.aliyuncs.com/blog/2021-05-15/%E6%B5%AE%E5%8A%A8/19660175_p0_master1200.jpg"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-15</div><div class="title">浮动</div></div></a></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Dylan</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false});</script></body></html>
